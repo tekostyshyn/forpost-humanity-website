@@ -2,6 +2,10 @@ body {
     // font-family: $fontRoboto;
     font-weight: 400;
     font-size: 14px;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scrollbar-width: none
   }
   
   main {
