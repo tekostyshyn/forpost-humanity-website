@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  align-items: center;
+  justify-content: end;
+}
+
+.socials__item {
+  width: 16px;
+  height: 16px;
+}
+
+.socials__link {
+  fill: $iconPrimaryColor;
+
+  transition: fill $baseTransition;
+}
+
+.socials__link:hover,
+.socials__link:focus {
+  fill: $mainWhiteColor;
+}
+
+.socials__icon {
+  width: 100%;
+  height: 100%;
+
+}
