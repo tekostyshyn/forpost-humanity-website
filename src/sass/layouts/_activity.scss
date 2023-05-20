@@ -1,0 +1,35 @@
+.activity {
+    padding-bottom: 60px;
+}
+
+.activity__title {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.activity__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.activity__item {
+    flex-basis: 400px;
+    font-size: 24px;
+    line-height: 1.24;
+}
+
+.activity__subtitle {
+    color: $accentColor;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.activity__text {
+    font-size: 18px;
+    text-align: left;
+}
+
+
