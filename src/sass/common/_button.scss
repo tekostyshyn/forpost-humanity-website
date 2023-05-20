@@ -8,10 +8,10 @@
   text-transform: uppercase;
   font-size: 18px;
   transition: background-color $baseTransition, color $baseTransition;
-}
 
-.button:hover,
-.button:focus {
-  color: $mainWhiteColor;
-  background-color: $accentColor;
+  &:hover,
+  &:focus {
+    color: $mainWhiteColor;
+    background-color: $accentColor;
+  }
 }
