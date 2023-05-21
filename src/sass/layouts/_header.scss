@@ -1,6 +1,14 @@
 .header__socials {
   height: 60px;
   background-color: $mainBlackColor;
+
+  @media screen and (min-width: 768px) {
+    height: 70px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 80px;
+  }
 }
 
 .header__container {
