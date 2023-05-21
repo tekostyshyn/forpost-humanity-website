@@ -1,7 +1,9 @@
 .footer__upperbox {
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
-  height: 200px;
+  min-height: 200px;
   background-color: $mainGrayColor;
 }
 
@@ -13,20 +15,44 @@
 }
 
 .footer__container {
-  align-items: center;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 0;
+    justify-content: space-between;
+  }
 }
 
 .footer__copyright {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   color: #f7f7f7;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+  }
 }
 
 .footer__logo-link {
   display: block;
-  width: 300px;
+  width: 200px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 300px;
+  }
 }
 
 .footer__logo {
@@ -42,7 +68,7 @@
 .footer__slogan {
   font-weight: 300;
   font-style: italic;
-  font-size: 24px;
+  font-size: 16px;
   color: #f7f7f7;
   margin-bottom: 20px;
 
@@ -53,18 +79,32 @@
   &--bold {
     font-weight: 700;
   }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .footer__address {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 15px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+  }
 }
 
 .footer__address-link {
   text-align: right;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   color: #f7f7f7;
 
@@ -74,9 +114,24 @@
   &:focus {
     color: $accentColor;
   }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
 .footer__socials {
   margin-top: 15px;
-}
+  justify-content: center;
 
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: end;
+    font-size: 18px;
+  }
+}
