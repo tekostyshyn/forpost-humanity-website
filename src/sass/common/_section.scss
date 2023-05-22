@@ -37,9 +37,16 @@
 
 .section__text {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.24;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
