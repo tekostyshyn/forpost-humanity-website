@@ -21,12 +21,12 @@
   gap: 20px;
 
   @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    gap: 0;
     flex-direction: row;
   }
 
   @media screen and (min-width: 1200px) {
-    gap: 0;
-    justify-content: space-between;
   }
 }
 
@@ -34,9 +34,6 @@
   text-align: center;
   font-size: 10px;
   color: #f7f7f7;
-
-  @media screen and (min-width: 768px) {
-  }
 
   @media screen and (min-width: 1200px) {
     font-size: 12px;
@@ -46,9 +43,6 @@
 .footer__logo-link {
   display: block;
   width: 200px;
-
-  @media screen and (min-width: 768px) {
-  }
 
   @media screen and (min-width: 1200px) {
     width: 300px;
@@ -80,9 +74,6 @@
     font-weight: 700;
   }
 
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1200px) {
     font-size: 24px;
   }
@@ -95,11 +86,9 @@
   gap: 15px;
 
   @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1200px) {
     align-items: flex-end;
   }
+
 }
 
 .footer__address-link {
@@ -115,9 +104,6 @@
     color: $accentColor;
   }
 
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1200px) {
     font-size: 18px;
   }
@@ -128,10 +114,10 @@
   justify-content: center;
 
   @media screen and (min-width: 768px) {
+    justify-content: end;
   }
 
   @media screen and (min-width: 1200px) {
-    justify-content: end;
     font-size: 18px;
   }
 }

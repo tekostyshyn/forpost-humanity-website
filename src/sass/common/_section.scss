@@ -6,19 +6,33 @@
 }
 
 .section__header {
-  height: 150px;
+  height: 80px;
   background-color: $accentColor;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 150px;
+    margin-bottom: 60px;
+  }
 }
 
 .section__title {
   color: $mainWhiteColor;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 28px;
   // text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 42px;
+  }
 }
 
 .section__text {
