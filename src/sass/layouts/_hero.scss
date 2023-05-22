@@ -1,49 +1,24 @@
 .hero {
-  background-image: url(../images/hero-img.jpg);
+  background-image: url(../images/hero-img-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 600px;
+  min-height: 350px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    & {
-      background-image: url(../images/hero-img.jpg);
-    }
+  @media screen and (min-width: 480px) {
+    background-image: url(../images/hero-img-mob480.jpg);
+    min-height: 420px;
   }
 
-  // @media screen and (min-width: 768px) {
-  //   background-image: linear-gradient($gradientHero, $gradientHero),
-  //     url(../../images/hero-img.jpg);
+  @media screen and (min-width: 768px) {
+    min-height: 500px;
+    background-image: url(../images/hero-img.jpg);
+  }
 
-  //   @media (min-device-pixel-ratio: 2),
-  //     (-webkit-min-device-pixel-ratio: 2),
-  //     (min-resolution: 192dpi),
-  //     (min-resolution: 2dppx) {
-  //     & {
-  //       background-image: linear-gradient($gradientHero, $gradientHero),
-  //         url(../../images/hero-img.jpg);
-  //     }
-  //   }
-  // }
-
-  // @media screen and (min-width: 1200px) {
-  //   padding: 200px 0px;
-  //   background-image: linear-gradient($gradientHero, $gradientHero), url(../../images/hero-img.jpg);
-
-  //   @media (min-device-pixel-ratio: 2),
-  //     (-webkit-min-device-pixel-ratio: 2),
-  //     (min-resolution: 192dpi),
-  //     (min-resolution: 2dppx) {
-  //     & {
-  //       background-image: linear-gradient($gradientHero, $gradientHero),
-  //         url(../images/hero-bgd@2x.jpeg);
-  //     }
-  //   }
-  // }
+  @media screen and (min-width: 1200px) {
+    min-height: 680px;
+  }
 }
