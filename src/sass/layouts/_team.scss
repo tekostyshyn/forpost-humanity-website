@@ -1,9 +1,6 @@
 .team {
   padding-bottom: 30px;
 
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1200px) {
     padding-bottom: 60px;
   }
@@ -17,7 +14,6 @@
 
 .team__text {
   margin-bottom: 30px;
-
 }
 
 .team__accent-text {
@@ -26,6 +22,14 @@
 
 .team__list {
   text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
+  }
 }
 
 .team__item {
@@ -64,5 +68,52 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 20px;
+  }
+}
+
+.team__actions-list {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 40px;
+  }
+}
+
+.team__actions-image {
+  width: 300px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    width: 360px;
+  }
+}
+
+.team__actions-caption {
+  font-size: 18px;
+  margin-bottom: 5px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
+
+.team__actions-button {
+  font-size: 18px;
+  font-weight: 500;
+  width: 170px;
+  height: 42px;
+
+  @media screen and (min-width: 1200px) {
+    width: 240px;
+    height: 54px;
+    font-size: 24px;
   }
 }
