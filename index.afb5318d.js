@@ -1,2 +1,0 @@
-const e=document.querySelector(".news__list"),t=document.querySelector(".news__button"),c=async t=>{try{const c=await fetch(`https://646e285f9c677e23218b2f9c.mockapi.io/allnews?limit=3&page=${t}`),n=await c.json();console.log(n);const o=n.map((e=>`<li class=""><p>${e.title}</p></li>`)).join("");e.innerHTML=o}catch(e){console.log(e.message)}};c(1),t.addEventListener("click",(()=>{c(2)}));
-//# sourceMappingURL=index.afb5318d.js.map
