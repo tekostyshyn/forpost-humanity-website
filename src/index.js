@@ -1,26 +1,64 @@
-const url = 'https://646e285f9c677e23218b2f9c.mockapi.io/allnews';
+import { news } from './news/news';
 
-const newsListEL = document.querySelector('.news__list');
-const newsButtonEL = document.querySelector('.news__button');
+const newsBoxEl = document.querySelector('.news__box');
+const prevButtonEL = document.querySelector('#prev-button');
+const nextButtonEL = document.querySelector('#next-button');
 
+let pagenumber = 0;
 
-const fetchNews = async pagenumber => {
-  try {
-    const response = await fetch(`${url}?limit=3&page=${pagenumber}`);
-    const news = await response.json();
-    console.log(news);
+const renderNews = () => {
+  newsBoxEl.innerHTML = '';
+  const visibleNews = news[pagenumber];
 
-    const markup = news
-      .map(el => `<li class=""><p>${el.title}</p></li>`)
-      .join('');
-    newsListEL.innerHTML = markup;
+  const imageWrapper = document.createElement('div');
+  imageWrapper.classList.add('news__image-wrapper');
+  imageWrapper.style.backgroundImage = `url('${visibleNews.imageUrl}')`;
 
-  } catch (error) {
-    console.log(error.message);
+  const textWrapper = document.createElement('div');
+  textWrapper.classList.add('news__text-wrapper');
+
+  const text = document.createElement('p');
+  text.innerHTML = `${visibleNews.description}`;
+  text.classList.add('news__text');
+
+  const date = document.createElement('p');
+  date.innerHTML = `Опубліковано: ${visibleNews.date}`;
+  date.classList.add('news__date');
+
+  newsBoxEl.appendChild(imageWrapper);
+  textWrapper.appendChild(text);
+  textWrapper.appendChild(date);
+  newsBoxEl.appendChild(textWrapper);
+};
+
+const checkPageNumber = () => {
+  if (pagenumber <= 0) {
+    prevButtonEL.setAttribute('disabled', 'true');
+  } else {
+    prevButtonEL.removeAttribute('disabled');
+  }
+
+  console.log(pagenumber);
+  console.log(news.length);
+
+  if (pagenumber === news.length - 1) {
+    nextButtonEL.setAttribute('disabled', 'true');
+  } else {
+    nextButtonEL.removeAttribute('disabled');
   }
 };
 
-fetchNews(1);
-newsButtonEL.addEventListener('click', () => {
-    fetchNews(2)
-})
+checkPageNumber();
+renderNews();
+
+prevButtonEL.addEventListener('click', () => {
+  pagenumber -= 1;
+  checkPageNumber();
+  renderNews();
+});
+
+nextButtonEL.addEventListener('click', e => {
+  pagenumber += 1;
+  checkPageNumber();
+  renderNews();
+});

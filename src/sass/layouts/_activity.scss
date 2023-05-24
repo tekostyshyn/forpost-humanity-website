@@ -1,21 +1,13 @@
 .activity {
-  padding-bottom: 40px;
-
-  @media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding-bottom: 60px;
-}
+  }
 }
 
 .activity__title {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 20px;
-
-  @media screen and (min-width: 768px) {
-  }
 
   @media screen and (min-width: 1200px) {
     font-size: 32px;
@@ -47,12 +39,12 @@
 
   @media screen and (min-width: 768px) {
     flex-basis: 340px;
-}
+  }
 
-@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 24px;
     flex-basis: 400px;
-}
+  }
 }
 
 .activity__subtitle {
@@ -65,7 +57,7 @@
   font-size: 14px;
   text-align: left;
 
-@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 18px;
-}
+  }
 }
