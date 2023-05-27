@@ -1,4 +1,5 @@
-import { news } from './news/news';
+import { news } from './news';
+import { langArr } from './translation';
 
 const newsBoxEl = document.querySelector('.news__box');
 const prevButtonEL = document.querySelector('#prev-button');
@@ -38,9 +39,6 @@ const checkPageNumber = () => {
     prevButtonEL.removeAttribute('disabled');
   }
 
-  console.log(pagenumber);
-  console.log(news.length);
-
   if (pagenumber === news.length - 1) {
     nextButtonEL.setAttribute('disabled', 'true');
   } else {
@@ -62,3 +60,49 @@ nextButtonEL.addEventListener('click', e => {
   checkPageNumber();
   renderNews();
 });
+
+const uaButton = document.querySelector('#button-ua');
+const enButton = document.querySelector('#button-en');
+const allLang = ['en', 'ua'];
+
+function changeURLLanguage(lang) {
+  location.href = window.location.pathname + '#' + lang;
+  location.reload();
+}
+
+let currentLang;
+
+uaButton.addEventListener('click', () => {
+  if (currentLang === uaButton.textContent) return;
+  currentLang = uaButton.textContent;
+  uaButton.classList.add('.active-lang');
+  enButton.classList.remove('.active-lang');
+  changeURLLanguage(currentLang);
+});
+
+enButton.addEventListener('click', () => {
+  if (currentLang === enButton.textContent) return;
+  currentLang = enButton.textContent;
+  enButton.classList.add('.active-lang');
+  uaButton.classList.remove('.active-lang');
+  changeURLLanguage(currentLang);
+});
+
+function changeLanguage() {
+    let hash = window.location.hash;
+    hash = hash.slice(1);
+    if (!allLang.includes(hash)) {
+        location.href = window.location.pathname + '#ua';
+        location.reload();
+    }
+    document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
+    for (let key in langArr) {
+        let elem = document.querySelector(`#${key}`);
+        if (elem) {
+            elem.innerHTML = langArr[key][hash];
+        }
+
+    }
+}
+
+changeLanguage();
