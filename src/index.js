@@ -63,6 +63,8 @@ nextButtonEL.addEventListener('click', e => {
 
 const uaButton = document.querySelector('#button-ua');
 const enButton = document.querySelector('#button-en');
+const heroLogoImg = document.querySelector('.hero-logo');
+const footerLogoImg = document.querySelector('.footer-logo');
 const allLang = ['en', 'ua'];
 let currentLang;
 
@@ -90,14 +92,16 @@ function changeLanguage() {
     location.reload();
   }
   if (hash === 'ua') {
-    console.log(hash);
     uaButton.classList.add('active-lang');
     enButton.classList.remove('active-lang');
+    heroLogoImg.setAttribute('src', './images/logo_hero_ua.png');
+    footerLogoImg.setAttribute('src', './images/logo_footer_ua.png');
   }
   if (hash === 'en') {
-    console.log(hash);
     enButton.classList.add('active-lang');
     uaButton.classList.remove('active-lang');
+    heroLogoImg.setAttribute('src', './images/logo_hero_en.png');
+    footerLogoImg.setAttribute('src', './images/logo_footer_en.png');
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {
