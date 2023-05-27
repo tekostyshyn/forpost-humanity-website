@@ -64,45 +64,48 @@ nextButtonEL.addEventListener('click', e => {
 const uaButton = document.querySelector('#button-ua');
 const enButton = document.querySelector('#button-en');
 const allLang = ['en', 'ua'];
+let currentLang;
 
 function changeURLLanguage(lang) {
   location.href = window.location.pathname + '#' + lang;
   location.reload();
 }
 
-let currentLang;
-
 uaButton.addEventListener('click', () => {
   if (currentLang === uaButton.textContent) return;
   currentLang = uaButton.textContent;
-  uaButton.classList.add('.active-lang');
-  enButton.classList.remove('.active-lang');
   changeURLLanguage(currentLang);
 });
 
 enButton.addEventListener('click', () => {
   if (currentLang === enButton.textContent) return;
   currentLang = enButton.textContent;
-  enButton.classList.add('.active-lang');
-  uaButton.classList.remove('.active-lang');
   changeURLLanguage(currentLang);
 });
 
 function changeLanguage() {
-    let hash = window.location.hash;
-    hash = hash.slice(1);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#ua';
-        location.reload();
+  let hash = window.location.hash.slice(1);
+  if (!allLang.includes(hash)) {
+    location.href = window.location.pathname + '#ua';
+    location.reload();
+  }
+  if (hash === 'ua') {
+    console.log(hash);
+    uaButton.classList.add('active-lang');
+    enButton.classList.remove('active-lang');
+  }
+  if (hash === 'en') {
+    console.log(hash);
+    enButton.classList.add('active-lang');
+    uaButton.classList.remove('active-lang');
+  }
+  document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
+  for (let key in langArr) {
+    let elem = document.querySelector(`#${key}`);
+    if (elem) {
+      elem.innerHTML = langArr[key][hash];
     }
-    document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
-    for (let key in langArr) {
-        let elem = document.querySelector(`#${key}`);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
-        }
-
-    }
+  }
 }
 
 changeLanguage();

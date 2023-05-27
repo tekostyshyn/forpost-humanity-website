@@ -17,3 +17,29 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.lang-button {
+  background-color: transparent;
+  color: $mainWhiteColor;
+  text-transform: uppercase;
+  width: 50px;
+  border-radius: 3px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50px;
+    font-size: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &.active-lang {
+    color: $accentColor;
+  }
+}
