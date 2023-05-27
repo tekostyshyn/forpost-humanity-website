@@ -1,9 +1,14 @@
 .button {
-  width: 80px;
+  flex-shrink: 0;
+  width: 120px;
   height: 34px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
 
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  
   @media screen and (min-width: 768px) {
     width: 120px;
     height: 40px;

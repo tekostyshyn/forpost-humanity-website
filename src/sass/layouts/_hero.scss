@@ -1,36 +1,53 @@
 .hero {
-  background-image: url(../images/hero_img_ua.jpg);
+  background-image: url(../images/hero_img_ua_320.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  min-height: 300px;
+  min-height: 320px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
 
   @media screen and (min-width: 480px) {
+    background-image: url(../images/hero_img_ua_480.jpg);
     min-height: 360px;
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 100px;
-    min-height: 480px;
+    min-height: 500px;
   }
 
   @media screen and (min-width: 1200px) {
+    background-image: url(../images/hero_img_ua.jpg);
     padding-top: 120px;
     min-height: 680px;
   }
 }
 
 .hero-ua {
-  background-image: url(../images/hero_img_ua.jpg);
+  background-image: url(../images/hero_img_ua_320.jpg);
+
+  @media screen and (min-width: 480px) {
+    background-image: url(../images/hero_img_ua_480.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/hero_img_ua.jpg);
+  }
 }
 
 .hero-en {
-  background-image: url(../images/hero_img_en.jpg);
-}
+  background-image: url(../images/hero_img_en_320.jpg);
+
+  @media screen and (min-width: 480px) {
+    background-image: url(../images/hero_img_en_480.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/hero_img_en.jpg);
+  }}
 
 .hero__logo {
   margin-left: auto;

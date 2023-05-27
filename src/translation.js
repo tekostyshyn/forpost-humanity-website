@@ -25,7 +25,7 @@ export const langArr = {
   },
   activityTitle2: {
     en: 'Bank details of CF "Forpost of Humanity"',
-    ua: 'Реквізити БО "Форпост людяності"',
+    ua: 'Реквізити БФ "Форпост людяності"',
   },
   activitySubTitle1: {
     en: 'For donations in USD',
@@ -69,7 +69,7 @@ export const langArr = {
   },
   worldText: {
     en: 'Pain, devastation, human suffering and tragedies... Every day since the beginning of the war, the civilian population in one way or another has been fighting for the survival of themselves, their families and their country.',
-    ua: "Бiль, розруха, людськi страждання та трагедії... Кожен день з початку вiйни цивiльне населения в тiй чи iншiй мipi веде свою боротьбу - за виживання - своє, с'iмї та країни.",
+    ua: "Бiль, розруха, людськi страждання та трагедії... Кожен день з початку вiйни цивiльне населення в тiй чи iншiй мipi веде свою боротьбу - за виживання - своє, сiм'ї та країни",
   },
   teamTitle: {
     en: 'Our team',
@@ -79,7 +79,7 @@ export const langArr = {
     en: `CF "Forpost of Humanity" was created according to the all laws of nature - when a "critical mass" of decent and caring
     <span class="team__accent-text">citizens with an active life position and relevant experience</span> acccumulated,
     it caused a chain reaction - it was decided to unite our efforts under one roof.`,
-    ua: `БФ "Форпост людяності" був створена за всіма законами природи - коли накопичилася "критична маса" порядних і небайдужих
+    ua: `БФ "Форпост людяності" був створений за всіма законами природи - коли накопичилася "критична маса" порядних і небайдужих
     <span class="team__accent-text">громадян з активною життєвою позицією та відповідним досвідом,</span>
     вона спричина ланцюгову реакцію - було прийнято рішення об'єднати наші зусилля під одним дахом.`,
   },

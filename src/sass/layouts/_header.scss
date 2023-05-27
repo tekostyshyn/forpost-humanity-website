@@ -1,4 +1,4 @@
-.header__socials {
+.header {
   height: 60px;
   background-color: $mainBlackColor;
 
@@ -22,12 +22,18 @@
   background-color: transparent;
   color: $mainWhiteColor;
   text-transform: uppercase;
-  width: 40px;
+  width: 30px;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 14px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
+    width: 40px;
   }
 
   @media screen and (min-width: 1200px) {
