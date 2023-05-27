@@ -1,4 +1,4 @@
-import { news } from './news';
+import { newsUa, newsEn } from './news';
 import { langArr } from './translation';
 import logoFooterUa from './images/logo_footer_ua.png';
 import logoFooterEn from './images/logo_footer_en.png';
@@ -11,9 +11,14 @@ const nextButtonEL = document.querySelector('#next-button');
 
 let pagenumber = 0;
 
-const renderNews = () => {
+const renderNews = lang => {
   newsBoxEl.innerHTML = '';
-  const visibleNews = news[pagenumber];
+  let visibleNews;
+  if (lang === 'ua') {
+    visibleNews = newsUa[pagenumber];
+  } else if (lang === 'en') {
+    visibleNews = newsEn[pagenumber];
+  }
 
   const imageWrapper = document.createElement('div');
   imageWrapper.classList.add('news__image-wrapper');
@@ -27,7 +32,7 @@ const renderNews = () => {
   text.classList.add('news__text');
 
   const date = document.createElement('p');
-  date.innerHTML = `Опубліковано: ${visibleNews.date}`;
+  date.innerHTML = `${visibleNews.date}`;
   date.classList.add('news__date');
 
   newsBoxEl.appendChild(imageWrapper);
@@ -43,7 +48,7 @@ const checkPageNumber = () => {
     prevButtonEL.removeAttribute('disabled');
   }
 
-  if (pagenumber === news.length - 1) {
+  if (pagenumber === newsUa.length - 1) {
     nextButtonEL.setAttribute('disabled', 'true');
   } else {
     nextButtonEL.removeAttribute('disabled');
@@ -51,7 +56,7 @@ const checkPageNumber = () => {
 };
 
 checkPageNumber();
-renderNews();
+renderNews('ua');
 
 prevButtonEL.addEventListener('click', () => {
   pagenumber -= 1;
@@ -102,6 +107,7 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroUa);
     footerLogoImg.setAttribute('src', logoFooterUa);
     heroSection.classList.add('hero-ua');
+    renderNews('ua');
   }
   if (hash === 'en') {
     enButton.classList.add('active-lang');
@@ -109,6 +115,7 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroEn);
     footerLogoImg.setAttribute('src', logoFooterEn);
     heroSection.classList.add('hero-en');
+    renderNews('en');
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {
