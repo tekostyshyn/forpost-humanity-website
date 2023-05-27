@@ -10,13 +10,12 @@ const prevButtonEL = document.querySelector('#prev-button');
 const nextButtonEL = document.querySelector('#next-button');
 
 let pagenumber = 0;
-location.href = window.location.pathname + '#ua';
 let hash = window.location.hash.slice(1);
 
 const renderNews = () => {
   newsBoxEl.innerHTML = '';
   let visibleNews;
-  if (hash === 'ua') {
+  if (hash === 'ua' || !hash) {
     visibleNews = newsUa[pagenumber];
   } else if (hash === 'en') {
     visibleNews = newsEn[pagenumber];
