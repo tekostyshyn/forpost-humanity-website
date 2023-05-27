@@ -10,18 +10,20 @@ const prevButtonEL = document.querySelector('#prev-button');
 const nextButtonEL = document.querySelector('#next-button');
 
 let pagenumber = 0;
+let hash = window.location.hash.slice(1);
 
-const renderNews = lang => {
+const renderNews = () => {
   newsBoxEl.innerHTML = '';
   let visibleNews;
-  if (lang === 'ua') {
+  if (hash === 'ua') {
     visibleNews = newsUa[pagenumber];
-  } else if (lang === 'en') {
+  } else if (hash === 'en') {
     visibleNews = newsEn[pagenumber];
   }
 
   const imageWrapper = document.createElement('div');
   imageWrapper.classList.add('news__image-wrapper');
+  console.log(visibleNews);
   imageWrapper.style.backgroundImage = `url('${visibleNews.imageUrl}')`;
 
   const textWrapper = document.createElement('div');
@@ -54,9 +56,6 @@ const checkPageNumber = () => {
     nextButtonEL.removeAttribute('disabled');
   }
 };
-
-checkPageNumber();
-renderNews('ua');
 
 prevButtonEL.addEventListener('click', () => {
   pagenumber -= 1;
@@ -107,7 +106,6 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroUa);
     footerLogoImg.setAttribute('src', logoFooterUa);
     heroSection.classList.add('hero-ua');
-    renderNews('ua');
   }
   if (hash === 'en') {
     enButton.classList.add('active-lang');
@@ -115,7 +113,6 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroEn);
     footerLogoImg.setAttribute('src', logoFooterEn);
     heroSection.classList.add('hero-en');
-    renderNews('en');
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {
@@ -126,4 +123,6 @@ function changeLanguage() {
   }
 }
 
+checkPageNumber();
+renderNews();
 changeLanguage();
