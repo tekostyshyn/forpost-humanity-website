@@ -1,5 +1,9 @@
 import { news } from './news';
 import { langArr } from './translation';
+import logoFooterUa from './images/logo_footer_ua.png';
+import logoFooterEn from './images/logo_footer_en.png';
+import logoHeroUa from './images/logo_hero_ua.png';
+import logoHeroEn from './images/logo_hero_en.png';
 
 const newsBoxEl = document.querySelector('.news__box');
 const prevButtonEL = document.querySelector('#prev-button');
@@ -63,8 +67,9 @@ nextButtonEL.addEventListener('click', e => {
 
 const uaButton = document.querySelector('#button-ua');
 const enButton = document.querySelector('#button-en');
-const heroLogoImg = document.querySelector('.hero-logo');
-const footerLogoImg = document.querySelector('.footer-logo');
+const heroLogoImg = document.querySelector('#hero-logo');
+const footerLogoImg = document.querySelector('#footer-logo');
+const heroSection = document.querySelector('#hero-section');
 const allLang = ['en', 'ua'];
 let currentLang;
 
@@ -94,14 +99,16 @@ function changeLanguage() {
   if (hash === 'ua') {
     uaButton.classList.add('active-lang');
     enButton.classList.remove('active-lang');
-    heroLogoImg.setAttribute('src', './images/logo_hero_ua.png');
-    footerLogoImg.setAttribute('src', './images/logo_footer_ua.png');
+    heroLogoImg.setAttribute('src', logoHeroUa);
+    footerLogoImg.setAttribute('src', logoFooterUa);
+    heroSection.classList.add('hero-ua');
   }
   if (hash === 'en') {
     enButton.classList.add('active-lang');
     uaButton.classList.remove('active-lang');
-    heroLogoImg.setAttribute('src', './images/logo_hero_en.png');
-    footerLogoImg.setAttribute('src', './images/logo_footer_en.png');
+    heroLogoImg.setAttribute('src', logoHeroEn);
+    footerLogoImg.setAttribute('src', logoFooterEn);
+    heroSection.classList.add('hero-en');
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {

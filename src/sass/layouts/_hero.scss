@@ -1,29 +1,35 @@
 .hero {
-  background-image: url(../images/hero-img-mob.jpg);
+  background-image: url(../images/hero_img_ua.jpg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom;
   background-size: cover;
-  min-height: 350px;
+  min-height: 300px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
 
   @media screen and (min-width: 480px) {
-    background-image: url(../images/hero-img-mob480.jpg);
-    min-height: 420px;
+    min-height: 360px;
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 100px;
-    min-height: 500px;
-    background-image: url(../images/hero-img.jpg);
+    min-height: 480px;
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 120px;
     min-height: 680px;
   }
+}
+
+.hero-ua {
+  background-image: url(../images/hero_img_ua.jpg);
+}
+
+.hero-en {
+  background-image: url(../images/hero_img_en.jpg);
 }
 
 .hero__logo {
