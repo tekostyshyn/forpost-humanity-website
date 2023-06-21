@@ -23,7 +23,6 @@ const renderNews = () => {
 
   const imageWrapper = document.createElement('div');
   imageWrapper.classList.add('news__image-wrapper');
-  console.log(visibleNews);
   imageWrapper.style.backgroundImage = `url('${visibleNews.imageUrl}')`;
 
   const textWrapper = document.createElement('div');
