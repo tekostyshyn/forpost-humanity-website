@@ -73,6 +73,8 @@ const enButton = document.querySelector('#button-en');
 const heroLogoImg = document.querySelector('#hero-logo');
 const footerLogoImg = document.querySelector('#footer-logo');
 const heroSection = document.querySelector('#hero-section');
+const volunteerButton = document.querySelector('#teamButton2');
+const teamButton = document.querySelector('#teamButton3');
 const allLang = ['en', 'ua'];
 let currentLang;
 
@@ -104,6 +106,8 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroUa);
     footerLogoImg.setAttribute('src', logoFooterUa);
     heroSection.classList.add('hero-ua');
+    volunteerButton.setAttribute('href', 'https://forms.gle/Fs4GBe83nBLLfwDq9');
+    teamButton.setAttribute('href', 'https://forms.gle/fcbK2DvuKKzzPDDJA')
   }
   if (hash === 'en') {
     enButton.classList.add('active-lang');
@@ -111,6 +115,8 @@ function changeLanguage() {
     heroLogoImg.setAttribute('src', logoHeroEn);
     footerLogoImg.setAttribute('src', logoFooterEn);
     heroSection.classList.add('hero-en');
+    volunteerButton.setAttribute('href', 'https://forms.gle/ePxXNEoffpRHcp1Q8');
+    teamButton.setAttribute('href', 'https://forms.gle/N7JzuuV8vXW9nvHS9')
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {
