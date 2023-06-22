@@ -1,5 +1,5 @@
-import pic1 from './images/post_1.jpeg';
-import pic2 from './images/post_2.jpeg';
+import pic1 from './images/post_1.jpg';
+import pic2 from './images/post_2.jpg';
 
 export const newsUa = [
   {
