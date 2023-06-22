@@ -96,8 +96,7 @@ enButton.addEventListener('click', () => {
 function changeLanguage() {
   let hash = window.location.hash.slice(1);
   if (!allLang.includes(hash)) {
-    location.href = window.location.pathname + '#ua';
-    location.reload();
+    return;
   }
   if (hash === 'ua') {
     uaButton.classList.add('active-lang');
