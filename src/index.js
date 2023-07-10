@@ -10,6 +10,7 @@ const prevButtonEL = document.querySelector('#prev-button');
 const nextButtonEL = document.querySelector('#next-button');
 
 let pagenumber = 0;
+
 let hash = window.location.hash.slice(1);
 
 const renderNews = () => {
@@ -107,7 +108,7 @@ function changeLanguage() {
     footerLogoImg.setAttribute('src', logoFooterUa);
     heroSection.classList.add('hero-ua');
     volunteerButton.setAttribute('href', 'https://forms.gle/Fs4GBe83nBLLfwDq9');
-    teamButton.setAttribute('href', 'https://forms.gle/fcbK2DvuKKzzPDDJA')
+    teamButton.setAttribute('href', 'https://forms.gle/fcbK2DvuKKzzPDDJA');
   }
   if (hash === 'en') {
     enButton.classList.add('active-lang');
@@ -116,7 +117,7 @@ function changeLanguage() {
     footerLogoImg.setAttribute('src', logoFooterEn);
     heroSection.classList.add('hero-en');
     volunteerButton.setAttribute('href', 'https://forms.gle/ePxXNEoffpRHcp1Q8');
-    teamButton.setAttribute('href', 'https://forms.gle/N7JzuuV8vXW9nvHS9')
+    teamButton.setAttribute('href', 'https://forms.gle/N7JzuuV8vXW9nvHS9');
   }
   document.querySelector('title').innerHTML = langArr['websiteTitle'][hash];
   for (let key in langArr) {
