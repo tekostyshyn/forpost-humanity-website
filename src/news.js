@@ -1,7 +1,14 @@
 import pic1 from './images/post_1.jpg';
 import pic2 from './images/post_2.jpg';
+import pic3 from './images/post_3.jpg';
 
 export const newsUa = [
+  {
+    description:
+      'Сьогодні в Україні ми відзначаємо дуже важливе свято – День Конституції. Це символ нашої незалежності та національної ідентичності. У Конституції України закріплені наші цінності, за які ми боремося століттями. Конституція символізує, що Україна є суверенною державою, яка ніколи нікому не підкориться. Слава Україні! Героям слава!',
+    imageUrl: pic3,
+    date: 'Опубліковано: 28 червня 2023 року',
+  },
   {
     description:
       'Сьогодні, 9 травня 2023 року, ми вперше святкуємо День Європи з нашими західними сусідами. У цій війні обов’язково переможуть демократія, європейські цінності, свобода, людяність. Колись ми перемогли фашизм, а тепер переможемо рашизм. Слава Україні! Хай живе Європа!',
@@ -19,13 +26,20 @@ export const newsUa = [
 export const newsEn = [
   {
     description:
+      'Today in Ukraine we celebrate a very important holiday - the day of our Constitution. It is a symbol of our independence and national identity. The Constitution of Ukraine enshrines our values, for which we have been fighting for centuries. The Constitution symbolizes that Ukraine is a sovereign state that will never surrender to anyone. Glory to Ukraine! Glory to the heroes!',
+    imageUrl: pic3,
+    date: 'Published: 28 of June 2023',
+  },
+  {
+    description:
       'Today, on 9th of May 2023, for the first time we are celebrating the Day of Europe with our Western neighbours. Democracy, European values, Freedom, Humanity will definitely win in this war.  Once they have defeated fascism, and now they will defeat rashism. Glory to Ukraine! Long live Europe!',
-      imageUrl: pic1,
-      date: 'Published: 09 of May 2023',
+    imageUrl: pic1,
+    date: 'Published: 09 of May 2023',
   },
   {
     description:
       'Today is the 438th day since the beginning of full-scaled war, which russia started against Ukraine. This is a long time, no wonder that our body, which main biological goal is to survive, tries to adapt, to forget negative experience. War has shocked and traumatized all of us. It is okay that even in such situation we are trying to leave a normal life, to work, to have vacation. But beside this we should not forget about people, who gave their lifes for us, for freedoom, for Ukraine. About people who suffered from the war and need our help. We should not forget to stay humans, to support others. Because humanity will save humanity.',
-      imageUrl: pic2,    date: 'Published: 07 of May 2023',
+    imageUrl: pic2,
+    date: 'Published: 07 of May 2023',
   },
 ];
