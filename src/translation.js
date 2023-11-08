@@ -64,8 +64,8 @@ export const langArr = {
     ua: 'Війна в Україні',
   },
   worldSubTitle: {
-    en: '9 years of war, 15 months of full scale invasion',
-    ua: '9 років війни, 15 місяців повномасштабного вторгнення',
+    en: '9 years of war, 18 months of full scale invasion',
+    ua: '9 років війни, 18 місяців повномасштабного вторгнення',
   },
   worldText: {
     en: 'Pain, devastation, human suffering and tragedies... Every day since the beginning of the war, the civilian population in one way or another has been fighting for the survival of themselves, their families and their country.',

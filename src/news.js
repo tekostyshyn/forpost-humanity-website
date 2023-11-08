@@ -1,8 +1,15 @@
 import pic1 from './images/post_1.jpg';
 import pic2 from './images/post_2.jpg';
 import pic3 from './images/post_3.jpg';
+import pic4 from './images/post_4.jpg';
 
 export const newsUa = [
+  {
+    description:
+      'Чотири тризуби на цьому зображенні символізують боротьбу, незалежність, історію та ідентичність українців. Вони є символом свята, яке сьогодні відзначають в Україні – Дня нашої Державності України. Наша державність бере свій початок від 28 липня 988 року, в день хрещення Київської Русі князем Володимиром. Пам’ятаймо, за що боролися наші предки, пам’ятаймо, за що ми боремося сьогодні. Слава Україні!',
+    imageUrl: pic4,
+    date: 'Опубліковано: 28 липня 2023 року',
+  },
   {
     description:
       'Сьогодні в Україні ми відзначаємо дуже важливе свято – День Конституції. Це символ нашої незалежності та національної ідентичності. У Конституції України закріплені наші цінності, за які ми боремося століттями. Конституція символізує, що Україна є суверенною державою, яка ніколи нікому не підкориться. Слава Україні! Героям слава!',
@@ -24,6 +31,11 @@ export const newsUa = [
 ];
 
 export const newsEn = [
+  {
+    description: 'The four tridents in this image represent the struggle, independence, history and identity of the Ukrainians. They are a symbol of the holiday celebrated in Ukraine today - the Day of Ukrainian Statehood. Our statehood began on 28 of July 988, on the day of the baptism of Kyivan Rus by Prince Volodymyr.  Remember what our ancestors fought for, remember what we are fighting for today. Glory to Ukraine!',
+    imageUrl: pic4,
+    date: 'Published: 28 of July 2023',
+  },
   {
     description:
       'Today in Ukraine we celebrate a very important holiday - the day of our Constitution. It is a symbol of our independence and national identity. The Constitution of Ukraine enshrines our values, for which we have been fighting for centuries. The Constitution symbolizes that Ukraine is a sovereign state that will never surrender to anyone. Glory to Ukraine! Glory to the heroes!',
